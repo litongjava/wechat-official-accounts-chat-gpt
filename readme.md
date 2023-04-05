@@ -89,8 +89,13 @@ java -jar target\wechat-official-accounts-chat-gpt-1.0.jar
 ### 测试是否启动成功
 访问下面的接口测试
 ```
-http://localhost:8080/wechat/status
+http://localhost:8080/l/wechat/msg/status
 ```
+消息接口
+```
+http://localhost:8080/l/wechat/msg
+```
+
 #### 微信公众号超时时间
 ChatGPT的响应时间比较长,可能会导致出现超时的情况
 微信服务器连接公众号开发者服务器时发生超时,超时时间为5秒,超时这个时间限制微信公众平台就采用了这个处理方式，这个是客户端无法改变的。除非找到微信平台有决策权的.
