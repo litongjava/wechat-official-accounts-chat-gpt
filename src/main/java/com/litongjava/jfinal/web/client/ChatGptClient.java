@@ -36,10 +36,14 @@ public class ChatGptClient {
     builder1.messages(Arrays.asList(m1)).maxTokens(3000).temperature(0.9);
     ChatCompletion chatCompletion = builder1.build();
 
-    ChatCompletionResponse response = chatGPT.chatCompletion(chatCompletion);
-    Message res = response.getChoices().get(0).getMessage();
-
-    return res.getContent();
+    ChatCompletionResponse response;
+    try{
+      response = chatGPT.chatCompletion(chatCompletion);
+      Message res = response.getChoices().get(0).getMessage();
+      return res.getContent();
+    }catch (Exception e){
+      return e.getMessage();
+    }
   }
 
   private static ChatGPT init() {
