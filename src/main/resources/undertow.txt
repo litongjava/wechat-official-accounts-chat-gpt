@@ -1,0 +1,26 @@
+undertow.devMode=true
+undertow.port=8080
+undertow.host=0.0.0.0
+undertow.contextPath=/l
+undertow.resourcePath = classpath:
+#jdbc-mysql
+jdbc.url=jdbc:mysql://localhost/alit_url_manager
+jdbc.user=root
+jdbc.pswd=root
+
+weixin.app.id=
+weixin.app.secret=
+weixin.app.token=
+weixin.app.encoding_aes_key=
+weixin.app.encryptMessage=true
+
+#多个key使用,分割
+chatgpt.keys=
+chatgpt.proxy.enable=true
+chatgpt.proxy.type=http
+chatgpt.proxy.http.host=
+chatgpt.proxy.http.port=
+#chatgpt.proxy.type=socks5
+chatgpt.proxy.socks5.host=
+chatgpt.proxy.socks5.port=
+
